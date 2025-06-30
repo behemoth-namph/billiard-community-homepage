@@ -85,7 +85,7 @@
           class="rounded-xl overflow-hidden shadow-2xl border border-border/40 bg-gradient-to-b from-background to-muted/20 hover-lift transition-all duration-500"
         >
           <img
-            src="https://cdn.dribbble.com/userupload/12302729/file/original-fa372845e394ee85bebe0389b9d86871.png?resize=1504x1128&vertical=center"
+            src="https://vibico.co/assets/img/features-1.webp"
             width="1280"
             height="720"
             alt="SaaSify dashboard"
