@@ -86,9 +86,9 @@
         >
           <img
             src="https://vibico.co/assets/img/features-1.webp"
-            width="1280"
-            height="720"
-            alt="SaaSify dashboard"
+            width="1024"
+            height="576"
+            alt="Tournament creation"
             class="w-full h-auto transition-transform duration-500 hover:scale-105"
           />
           <div

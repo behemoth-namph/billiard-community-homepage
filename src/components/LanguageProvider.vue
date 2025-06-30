@@ -247,14 +247,13 @@
       <div class="container flex flex-col gap-8 px-4 py-10 md:px-6 lg:py-16">
         <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
           <div class="space-y-4">
-            <div class="flex items-center gap-2 font-bold">
-              <div
-                class="size-8 rounded-lg bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center text-primary-foreground"
-              >
-                S
-              </div>
-              <span>SaaSify</span>
-            </div>
+            <img
+              src="/logo.webp"
+              alt="logo"
+              width="80"
+              height="32"
+              class="h-8 w-auto transition-all"
+            />
             <p class="text-sm text-muted-foreground">
               {{ t("footer.description") }}
             </p>
