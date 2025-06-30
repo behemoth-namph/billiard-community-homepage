@@ -20,7 +20,7 @@
                 <img
                   v-for="i in 5"
                   :key="i"
-                  :src="placeholderLogo"
+                  src="/placeholder-logo.svg"
                   :alt="`Company logo ${i}`"
                   width="120"
                   height="60"
@@ -396,7 +396,6 @@ import Features from "./Features.vue";
 import Pricing from "./Pricing.vue";
 import FAQ from "./FAQ.vue";
 import AnimatedSection from "./AnimatedSection.vue";
-import placeholderLogo from "../assets/placeholder-logo.svg";
 
 const currentLang = ref("en");
 
