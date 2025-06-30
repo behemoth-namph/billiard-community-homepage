@@ -33,9 +33,7 @@
             <button
               @click="billingCycle = 'monthly'"
               :class="`inline-flex items-center justify-center whitespace-nowrap rounded-full px-6 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 ${
-                billingCycle === 'monthly'
-                  ? 'bg-background text-foreground shadow-sm'
-                  : ''
+                billingCycle === 'monthly' ? 'bg-background  shadow-sm' : ''
               }`"
             >
               Monthly
@@ -43,9 +41,7 @@
             <button
               @click="billingCycle = 'annually'"
               :class="`inline-flex items-center justify-center whitespace-nowrap rounded-full px-6 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 ${
-                billingCycle === 'annually'
-                  ? 'bg-background text-foreground shadow-sm'
-                  : ''
+                billingCycle === 'annually' ? 'bg-background  shadow-sm' : ''
               }`"
             >
               Annually (Save 20%)

@@ -260,7 +260,7 @@
             </p>
           </div>
           <div class="space-y-4">
-            <h4 class="text-sm font-bold">{{ t("footer.product") }}</h4>
+            <h2 class="text-sm font-bold">{{ t("footer.product") }}</h2>
             <ul class="space-y-2 text-sm">
               <li>
                 <a
@@ -293,7 +293,7 @@
             </ul>
           </div>
           <div class="space-y-4">
-            <h4 class="text-sm font-bold">{{ t("footer.resources") }}</h4>
+            <h2 class="text-sm font-bold">{{ t("footer.resources") }}</h2>
             <ul class="space-y-2 text-sm">
               <li>
                 <a
@@ -326,7 +326,7 @@
             </ul>
           </div>
           <div class="space-y-4">
-            <h4 class="text-sm font-bold">{{ t("footer.company") }}</h4>
+            <h2 class="text-sm font-bold">{{ t("footer.company") }}</h2>
             <ul class="space-y-2 text-sm">
               <li>
                 <a
