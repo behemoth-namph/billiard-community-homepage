@@ -3,6 +3,11 @@ import tailwind from "@astrojs/tailwind";
 import vue from "@astrojs/vue";
 
 export default defineConfig({
-  integrations: [tailwind(), vue()],
+  integrations: [
+    tailwind({
+      applyBaseStyles: false,
+    }),
+    vue(),
+  ],
   output: "static",
 });

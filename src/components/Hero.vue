@@ -1,5 +1,5 @@
 <template>
-  <section class="w-full py-20 md:py-32 lg:py-40 overflow-hidden relative">
+  <section class="w-full py-20 overflow-hidden relative">
     <div class="container px-4 md:px-6 relative">
       <!-- Animated background -->
       <div
@@ -23,21 +23,6 @@
       </div>
 
       <div class="text-center max-w-3xl mx-auto mb-12">
-        <!-- Animated badge -->
-        <div
-          class="mb-4 inline-flex items-center rounded-full border px-4 py-1.5 text-sm font-medium bg-secondary text-secondary-foreground animate-fade-in-down hover-lift"
-        >
-          <span class="relative flex h-2 w-2 mr-2">
-            <span
-              class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"
-            ></span>
-            <span
-              class="relative inline-flex rounded-full h-2 w-2 bg-primary"
-            ></span>
-          </span>
-          Launching Soon
-        </div>
-
         <!-- Animated title -->
         <h1
           class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 animate-fade-in-up animate-delay-100"
@@ -45,13 +30,7 @@
           <span
             class="bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent animate-gradient"
           >
-            Elevate Your Workflow
-          </span>
-          <br />
-          <span
-            class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent animate-gradient"
-          >
-            with SaaSify
+            {{ t("hero.title") }}
           </span>
         </h1>
 
@@ -59,9 +38,7 @@
         <p
           class="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto animate-fade-in-up animate-delay-200"
         >
-          The all-in-one platform that helps teams collaborate, automate, and
-          deliver exceptional results. Streamline your processes and focus on
-          what matters most.
+          {{ t("hero.subtitle") }}
         </p>
 
         <!-- Animated buttons -->
@@ -71,7 +48,7 @@
           <button
             class="inline-flex items-center justify-center rounded-full text-base font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-12 px-8 hover-lift hover-glow group"
           >
-            Start Free Trial
+            {{ t("hero.startTrial") }}
             <ArrowRightIcon
               class="ml-2 size-4 transition-transform duration-300 group-hover:translate-x-1"
             />
@@ -79,7 +56,7 @@
           <button
             class="inline-flex items-center justify-center rounded-full text-base font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-12 px-8 hover-lift"
           >
-            Book a Demo
+            {{ t("hero.bookDemo") }}
           </button>
         </div>
 
@@ -91,19 +68,19 @@
             <CheckIcon
               class="size-4 text-primary animate-scale-in animate-delay-500"
             />
-            <span>No credit card</span>
+            <span>{{ t("hero.noCard") }}</span>
           </div>
           <div class="flex items-center gap-1 hover-lift">
             <CheckIcon
               class="size-4 text-primary animate-scale-in animate-delay-600"
             />
-            <span>14-day trial</span>
+            <span>{{ t("hero.trial") }}</span>
           </div>
           <div class="flex items-center gap-1 hover-lift">
             <CheckIcon
               class="size-4 text-primary animate-scale-in animate-delay-700"
             />
-            <span>Cancel anytime</span>
+            <span>{{ t("hero.cancel") }}</span>
           </div>
         </div>
       </div>
@@ -149,4 +126,11 @@
 
 <script setup>
 import { CheckIcon, ArrowRightIcon } from "lucide-vue-next";
+
+defineProps({
+  t: {
+    type: Function,
+    required: true,
+  },
+});
 </script>
