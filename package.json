@@ -1,0 +1,21 @@
+{
+  "name": "billiard-community-homepage",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/vue": "^4.5.3",
+    "astro": "^4.0.0",
+    "lucide-vue-next": "^0.525.0",
+    "vue": "^3.5.17"
+  },
+  "devDependencies": {
+    "@astrojs/tailwind": "^6.0.2",
+    "@tailwindcss/postcss": "^4.1.11",
+    "tailwindcss": "^3.4.17"
+  }
+}
