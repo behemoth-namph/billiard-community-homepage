@@ -26,29 +26,6 @@
       </div>
 
       <div class="mx-auto max-w-5xl">
-        <div class="flex justify-center mb-8">
-          <div
-            class="inline-flex h-10 items-center justify-center rounded-full bg-muted p-1 text-muted-foreground"
-          >
-            <button
-              @click="billingCycle = 'monthly'"
-              :class="`inline-flex items-center justify-center whitespace-nowrap rounded-full px-6 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 ${
-                billingCycle === 'monthly' ? 'bg-background  shadow-sm' : ''
-              }`"
-            >
-              Monthly
-            </button>
-            <button
-              @click="billingCycle = 'annually'"
-              :class="`inline-flex items-center justify-center whitespace-nowrap rounded-full px-6 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 ${
-                billingCycle === 'annually' ? 'bg-background  shadow-sm' : ''
-              }`"
-            >
-              Annually (Save 20%)
-            </button>
-          </div>
-        </div>
-
         <div class="grid gap-6 lg:grid-cols-3 lg:gap-8">
           <AnimatedSection
             v-for="(plan, i) in currentPlans"
