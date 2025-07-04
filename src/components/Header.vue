@@ -10,11 +10,9 @@
       <div class="flex items-center gap-2 font-bold">
         <a href="/">
           <img
-            src="/logo.webp"
+            :src="isDark ? '/logo_wh.webp' : '/logo.webp'"
             alt="logo"
-            width="80"
-            height="32"
-            class="h-8 w-auto transition-all"
+            class="h-12 w-auto transition-all"
           />
         </a>
       </div>

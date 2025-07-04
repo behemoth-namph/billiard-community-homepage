@@ -1,5 +1,5 @@
 <template>
-  <section class="w-full py-20 overflow-hidden relative">
+  <section class="hero w-full py-20 overflow-hidden relative">
     <div class="container px-4 md:px-6 relative">
       <!-- Animated background -->
       <div
@@ -45,11 +45,12 @@
         <div
           class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animate-delay-300"
         >
-          <button
+          <a
+            href="#contact"
             class="inline-flex items-center justify-center rounded-full text-base font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-12 px-8 hover-lift"
           >
             {{ t("hero.bookDemo") }}
-          </button>
+          </a>
         </div>
 
         <!-- Animated features list -->
@@ -78,46 +79,77 @@
       </div>
 
       <!-- Animated dashboard image -->
-      <div
-        class="relative mx-auto max-w-5xl animate-fade-in-up animate-delay-500"
+      <BaseSlider
+        :items="heroSections"
+        :breakpoints="{ 640: { slidesPerView: 1 } }"
+        effect="coverflow"
+        :coverflow-effect="{
+          rotate: 30,
+          stretch: 0,
+          depth: 200,
+          modifier: 2,
+          slideShadows: false,
+        }"
+        autoplay="false"
       >
-        <div
-          class="rounded-xl overflow-hidden shadow-2xl border border-border/40 bg-gradient-to-b from-background to-muted/20 hover-lift transition-all duration-500"
-        >
-          <img
-            src="https://vibico.co/assets/img/features-1.webp"
-            width="1024"
-            height="576"
-            alt="Tournament creation"
-            class="w-full h-auto transition-transform duration-500 hover:scale-105"
-          />
-          <div
-            class="absolute inset-0 rounded-xl ring-1 ring-inset ring-black/10 dark:ring-white/10"
-          ></div>
-        </div>
+        <template #default="{ item }">
+          <div class="relative mx-auto max-w-5xl group">
+            <!-- Image Wrapper -->
+            <div
+              class="relative overflow-hidden rounded-xl border border-border/40 bg-gradient-to-b from-background to-muted/20 transition-all duration-500"
+            >
+              <img
+                :src="item.image"
+                alt="Tournament"
+                width="1024"
+                height="576"
+                class="w-full h-auto group-hover:brightness-75 transition duration-500"
+              />
 
-        <!-- Enhanced floating orbs -->
-        <div
-          class="absolute -bottom-6 -right-6 -z-10 h-[300px] w-[300px] rounded-full bg-gradient-to-br from-primary/30 to-secondary/30 blur-3xl opacity-70 animate-float animate-delay-200"
-        ></div>
-        <div
-          class="absolute -top-6 -left-6 -z-10 h-[300px] w-[300px] rounded-full bg-gradient-to-br from-secondary/30 to-primary/30 blur-3xl opacity-70 animate-float animate-delay-400"
-        ></div>
+              <!-- Overlay Button -->
+              <a
+                :href="item.link"
+                target="_blank"
+                class="absolute inset-0 z-10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <span
+                  class="bg-primary text-white font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-primary/90 transition"
+                >
+                  {{ t("hero.learnMore") }}
+                </span>
+              </a>
 
-        <!-- Additional animated elements -->
-        <div
-          class="absolute top-10 right-10 w-4 h-4 bg-primary/40 rounded-full animate-pulse animate-delay-300"
-        ></div>
-        <div
-          class="absolute bottom-10 left-10 w-3 h-3 bg-secondary/50 rounded-full animate-pulse animate-delay-500"
-        ></div>
-      </div>
+              <!-- Decorative ring -->
+              <div
+                class="absolute inset-0 rounded-xl ring-1 ring-inset ring-black/10 dark:ring-white/10"
+              ></div>
+            </div>
+
+            <!-- Floating Elements -->
+            <div
+              class="absolute -bottom-6 -right-6 -z-10 h-[300px] w-[300px] rounded-full bg-gradient-to-br from-primary/30 to-secondary/30 blur-3xl opacity-70 animate-float animate-delay-200"
+            ></div>
+            <div
+              class="absolute -top-6 -left-6 -z-10 h-[300px] w-[300px] rounded-full bg-gradient-to-br from-secondary/30 to-primary/30 blur-3xl opacity-70 animate-float animate-delay-400"
+            ></div>
+            <div
+              class="absolute top-10 right-10 w-4 h-4 bg-primary/40 rounded-full animate-pulse animate-delay-300"
+            ></div>
+            <div
+              class="absolute bottom-10 left-10 w-3 h-3 bg-secondary/50 rounded-full animate-pulse animate-delay-500"
+            ></div>
+          </div>
+        </template>
+      </BaseSlider>
     </div>
   </section>
 </template>
 
 <script setup>
-import { CheckIcon, ArrowRightIcon } from "lucide-vue-next";
+import { computed } from "vue";
+import { CheckIcon } from "lucide-vue-next";
+
+import BaseSlider from "./BaseSlider.vue";
 
 defineProps({
   t: {
@@ -125,4 +157,23 @@ defineProps({
     required: true,
   },
 });
+
+const heroSections = computed(() => [
+  {
+    image: "public/hero/vibico-tournament.webp",
+    link: "https://tournaments.vibico.co/tournaments",
+  },
+  {
+    image: "public/hero/vibico-education.webp",
+    link: "https://academy.vibico.co/",
+  },
+]);
 </script>
+
+<style>
+@media (max-width: 576px) {
+  .hero .swiper {
+    overflow: visible;
+  }
+}
+</style>

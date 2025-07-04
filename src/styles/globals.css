@@ -228,7 +228,7 @@
 }
 
 .hover-glow:hover {
-  box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+  box-shadow: 0 0 20px rgba(233, 171, 23, 0.4); 
 }
 
 /* Intersection Observer Animation */

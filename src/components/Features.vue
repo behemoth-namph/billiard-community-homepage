@@ -7,20 +7,19 @@
         <div
           class="inline-flex items-center rounded-full border px-4 py-1.5 text-sm font-medium bg-secondary text-secondary-foreground hover-lift"
         >
-          Features
+          {{ t("features.badge") }}
         </div>
         <h2
           class="text-3xl md:text-4xl font-bold tracking-tight bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent"
         >
-          Everything You Need to Succeed
+          {{ t("features.title") }}
         </h2>
         <p class="max-w-[800px] text-muted-foreground md:text-lg">
-          Our comprehensive platform provides all the tools you need to
-          streamline your workflow, boost productivity, and achieve your goals.
+          {{ t("features.subtitle") }}
         </p>
       </AnimatedSection>
 
-      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-2 place-items-center">
         <AnimatedSection
           v-for="(feature, i) in features"
           :key="i"
@@ -58,52 +57,45 @@
 </template>
 
 <script setup>
+import { computed } from "vue";
 import {
   ZapIcon,
-  BarChartIcon,
-  UsersIcon,
-  ShieldIcon,
-  LayersIcon,
+  MonitorPlay,
+  BookOpenCheckIcon,
   StarIcon,
 } from "lucide-vue-next";
 import AnimatedSection from "./AnimatedSection.vue";
 
-const features = [
+const props = defineProps({
+  t: {
+    type: Function,
+    required: true,
+  },
+});
+
+const features = computed(() => [
   {
-    title: "Smart Automation",
+    title: props.t("features.servise1.title"),
+    description: props.t("features.servise1.desc"),
+    icon: MonitorPlay,
+  },
+  {
+    title: props.t("features.servise2.title"),
     description:
-      "Automate repetitive tasks and workflows to save time and reduce errors.",
+      props.t("features.servise2.desc"),
+    icon: BookOpenCheckIcon,
+  },
+  {
+    title: props.t("features.servise3.title"),
+    description:
+      props.t("features.servise3.desc"),
     icon: ZapIcon,
   },
   {
-    title: "Advanced Analytics",
+    title: props.t("features.servise4.title"),
     description:
-      "Gain valuable insights with real-time data visualization and reporting.",
-    icon: BarChartIcon,
-  },
-  {
-    title: "Team Collaboration",
-    description:
-      "Work together seamlessly with integrated communication tools.",
-    icon: UsersIcon,
-  },
-  {
-    title: "Enterprise Security",
-    description:
-      "Keep your data safe with end-to-end encryption and compliance features.",
-    icon: ShieldIcon,
-  },
-  {
-    title: "Seamless Integration",
-    description:
-      "Connect with your favorite tools through our extensive API ecosystem.",
-    icon: LayersIcon,
-  },
-  {
-    title: "24/7 Support",
-    description:
-      "Get help whenever you need it with our dedicated support team.",
+      props.t("features.servise4.desc"),
     icon: StarIcon,
   },
-];
+]);
 </script>

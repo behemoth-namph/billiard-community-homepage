@@ -5,7 +5,7 @@
       <Hero :t="t" />
 
       <!-- Logos Section -->
-      <AnimatedSection>
+      <!----<AnimatedSection>
         <section class="w-full py-12 border-y bg-muted/30">
           <div class="container px-4 md:px-6">
             <div
@@ -30,7 +30,7 @@
             </div>
           </div>
         </section>
-      </AnimatedSection>
+      </AnimatedSection>-->
 
       <Features :t="t" />
 
@@ -70,7 +70,7 @@
                 :key="i"
                 :class="`relative z-10 flex flex-col items-center text-center space-y-4 animate-fade-in-up animate-delay-${
                   (i + 1) * 200
-                } group hover-lift`"
+                } group`"
               >
                 <div
                   :class="`flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary/70 text-primary-foreground text-xl font-bold shadow-lg transition-all duration-300 group-hover:scale-110 hover-glow animate-float animate-delay-${
@@ -95,80 +95,19 @@
         </section>
       </AnimatedSection>
 
-      <!-- Testimonials Section -->
-      <section id="testimonials" class="w-full py-20 md:py-32">
-        <div class="container px-4 md:px-6">
-          <div
-            class="flex flex-col items-center justify-center space-y-4 text-center mb-12 animate-in"
-          >
-            <div
-              class="inline-flex items-center rounded-full border px-4 py-1.5 text-sm font-medium bg-secondary text-secondary-foreground"
-            >
-              {{ t("testimonials.badge") }}
-            </div>
-            <h2 class="text-3xl md:text-4xl font-bold tracking-tight">
-              {{ t("testimonials.title") }}
-            </h2>
-            <p class="max-w-[800px] text-muted-foreground md:text-lg">
-              {{ t("testimonials.subtitle") }}
-            </p>
-          </div>
+      <!----<Pricing :t="t" />-->
 
-          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <div
-              v-for="(testimonial, i) in testimonials"
-              :key="i"
-              class="animate-in"
-            >
-              <div
-                class="h-full overflow-hidden border border-border/40 bg-gradient-to-b from-background to-muted/10 backdrop-blur transition-all hover:shadow-md rounded-lg"
-              >
-                <div class="p-6 flex flex-col h-full">
-                  <div class="flex mb-4">
-                    <svg
-                      v-for="j in testimonial.rating"
-                      :key="j"
-                      class="size-4 text-yellow-500 fill-yellow-500"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                      />
-                    </svg>
-                  </div>
-                  <p class="text-lg mb-6 flex-grow">{{ testimonial.quote }}</p>
-                  <div
-                    class="flex items-center gap-4 mt-auto pt-4 border-t border-border/40"
-                  >
-                    <div
-                      class="size-10 rounded-full bg-muted flex items-center justify-center text-foreground font-medium"
-                    >
-                      {{ testimonial.author.charAt(0) }}
-                    </div>
-                    <div>
-                      <p class="font-medium">{{ testimonial.author }}</p>
-                      <p class="text-sm text-muted-foreground">
-                        {{ testimonial.role }}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <Pricing :t="t" />
       <FAQ :t="t" />
 
+      <Testimonials :t="t" />
+
+      <Contact :t="t" />
+
       <!-- CTA Section -->
-      <AnimatedSection>
+      <!---<AnimatedSection>
         <section
           class="w-full py-20 md:py-32 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground relative overflow-hidden"
         >
-          <!-- Animated background elements -->
           <div
             class="absolute inset-0 -z-10 bg-[linear-gradient(to_right,#ffffff10_1px,transparent_1px),linear-gradient(to_bottom,#ffffff10_1px,transparent_1px)] bg-[size:4rem_4rem] animate-pulse"
           ></div>
@@ -179,7 +118,6 @@
             class="absolute -bottom-24 -right-24 w-64 h-64 bg-white/10 rounded-full blur-3xl animate-float animate-delay-300"
           ></div>
 
-          <!-- Floating particles -->
           <div
             class="absolute top-20 left-20 w-2 h-2 bg-white/20 rounded-full animate-float animate-delay-100"
           ></div>
@@ -239,7 +177,7 @@
             </div>
           </div>
         </section>
-      </AnimatedSection>
+      </AnimatedSection>-->
     </main>
 
     <!-- Footer -->
@@ -248,7 +186,7 @@
         <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
           <div class="space-y-4">
             <img
-              src="/logo.webp"
+              :src="isDark ? '/logo_wh.webp' : '/logo.webp'"
               alt="logo"
               width="80"
               height="32"
@@ -390,20 +328,24 @@
 <script setup>
 import { ref, onMounted, onUnmounted, computed } from "vue";
 import { getCurrentLanguage, useTranslations } from "../i18n";
+
 import Header from "./Header.vue";
 import Hero from "./Hero.vue";
 import Features from "./Features.vue";
-import Pricing from "./Pricing.vue";
+// import Pricing from "./Pricing.vue";
 import FAQ from "./FAQ.vue";
+import Contact from "./Contact.vue";
+import Testimonials from "./Testimonials.vue";
 import AnimatedSection from "./AnimatedSection.vue";
 
 const currentLang = ref("en");
+const isDark = ref(false);
 
 const t = computed(() => {
   return useTranslations(currentLang.value);
 });
 
-const steps = [
+const steps = computed(() => [
   {
     step: "01",
     titleKey: "howItWorks.step1.title",
@@ -419,42 +361,55 @@ const steps = [
     titleKey: "howItWorks.step3.title",
     descKey: "howItWorks.step3.desc",
   },
-];
+]);
 
-const testimonials = [
+const testimonials = computed(() => [
   {
-    quote:
-      "SaaSify has transformed how we manage our projects. The automation features have saved us countless hours of manual work.",
-    author: "Sarah Johnson",
-    role: "Project Manager, TechCorp",
-    rating: 5,
+    quote: t.value("testimonials.user1.quote"),
+    author: t.value("testimonials.user1.author"),
+    role: t.value("testimonials.user1.role"),
+    rating: t.value("testimonials.user1.rating"),
   },
   {
-    quote:
-      "The analytics dashboard provides insights we never had access to before. It's helped us make data-driven decisions that have improved our ROI.",
-    author: "Michael Chen",
-    role: "Marketing Director, GrowthLabs",
-    rating: 5,
+    quote: t.value("testimonials.user2.quote"),
+    author: t.value("testimonials.user2.author"),
+    role: t.value("testimonials.user2.role"),
+    rating: t.value("testimonials.user2.rating"),
   },
   {
-    quote:
-      "Customer support is exceptional. Any time we've had an issue, the team has been quick to respond and resolve it. Couldn't ask for better service.",
-    author: "Emily Rodriguez",
-    role: "Operations Lead, StartupX",
-    rating: 5,
+    quote: t.value("testimonials.user3.quote"),
+    author: t.value("testimonials.user3.author"),
+    role: t.value("testimonials.user3.role"),
+    rating: t.value("testimonials.user3.rating"),
   },
-];
+]);
 
 const handleLanguageChange = (event) => {
   currentLang.value = event.detail;
 };
 
+const updateIsDark = () => {
+  isDark.value = document.documentElement.classList.contains("dark");
+};
+
 onMounted(() => {
   currentLang.value = getCurrentLanguage();
+  updateIsDark();
+
+  const observer = new MutationObserver(() => {
+    updateIsDark();
+  });
+
+  observer.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ["class"],
+  });
+
   window.addEventListener("languageChanged", handleLanguageChange);
 });
 
 onUnmounted(() => {
   window.removeEventListener("languageChanged", handleLanguageChange);
+  observer.disconnect();
 });
 </script>
