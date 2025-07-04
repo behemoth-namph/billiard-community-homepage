@@ -160,11 +160,11 @@ defineProps({
 
 const heroSections = computed(() => [
   {
-    image: "public/hero/vibico-tournament.webp",
+    image: "/hero/vibico-tournament.webp",
     link: "https://tournaments.vibico.co/tournaments",
   },
   {
-    image: "public/hero/vibico-education.webp",
+    image: "/hero/vibico-education.webp",
     link: "https://academy.vibico.co/",
   },
 ]);

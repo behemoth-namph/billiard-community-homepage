@@ -75,7 +75,7 @@ export const ui = {
     "testimonials.user1.author": "Dac Truong",
     "testimonials.user1.role": "Professional Player",
     "testimonials.user1.rating": 5,
-    "testimonials.user1.avatar": "public/testimonials/testimonials-4.webp",
+    "testimonials.user1.avatar": "/testimonials/testimonials-4.webp",
     "testimonials.user2.quote":
       "In the past, organizing tournaments at my club was time-consuming and prone to errors. Since using <b>VIBICO</b>’s tournament management tool, everything has become much more professional and effortless.<br>" +
       "With an intuitive interface and simple operations, I can easily create tournaments, invite players to register online, track progress, and update results in real time.<br>" +
@@ -84,7 +84,7 @@ export const ui = {
     "testimonials.user2.author": "Duong Quoc Viet",
     "testimonials.user2.role": "Club Owner",
     "testimonials.user2.rating": 5,
-    "testimonials.user2.avatar": "public/testimonials/testimonials-1.webp",
+    "testimonials.user2.avatar": "/testimonials/testimonials-1.webp",
     "testimonials.user3.quote":
       "I’m new to playing billiards and used to feel completely lost — I didn’t know where to start or whether I was practicing the right way. Since I started learning on <b>VIBICO</b>, I’ve made noticeable progress — not just because of the easy-to-understand content, but also because I can submit my practice videos to receive direct online feedback from instructors.<br>" +
       "All I need to do is record a video of my shot and upload it to the system — I then receive detailed comments and corrections from professional players. I’ve never seen this kind of feature on any other billiards learning platform before!<br>" +
@@ -92,13 +92,13 @@ export const ui = {
     "testimonials.user3.author": "Thai Nguyen",
     "testimonials.user3.role": "New Player",
     "testimonials.user3.rating": 5,
-    "testimonials.user3.avatar": "public/testimonials/testimonials-3.webp",
+    "testimonials.user3.avatar": "/testimonials/testimonials-3.webp",
     "testimonials.user4.quote":
       "I used to play billiards purely by instinct, but since learning on <b>VIBICO</b>, I've gained a deeper understanding of strategy, technique, and competition mindset. The courses are well-structured, easy to follow, and include video breakdowns of specific ball positions. What I love most is being able to learn from experienced players I used to only see in tournaments. Thanks to <b>VIBICO</b>, I feel more solid and confident every time I step up to the table.",
     "testimonials.user4.author": "Nam Pham",
     "testimonials.user4.role": "Amateur Billiards Player",
     "testimonials.user4.rating": 5,
-    "testimonials.user4.avatar": "public/testimonials/testimonials-3.webp",
+    "testimonials.user4.avatar": "/testimonials/testimonials-3.webp",
 
     // Pricing
     "pricing.badge": "Pricing",
@@ -255,7 +255,7 @@ export const ui = {
     "testimonials.user1.author": "Đắc Trường",
     "testimonials.user1.role": "Cơ thủ chuyên nghiệp",
     "testimonials.user1.rating": 5,
-    "testimonials.user1.avatar": "public/testimonials/testimonials-4.webp",
+    "testimonials.user1.avatar": "/testimonials/testimonials-4.webp",
     "testimonials.user2.quote":
       "Trước đây, việc tổ chức giải đấu tại câu lạc bộ của tôi khá mất thời gian và dễ xảy ra nhầm lẫn. Sau khi sử dụng công cụ hỗ trợ tổ chức giải đấu của <b>VIBICO</b>, mọi thứ trở nên chuyên nghiệp và dễ dàng hơn rất nhiều.<br>" +
       "Giao diện trực quan, thao tác đơn giản, tôi có thể tạo giải, mời người chơi đăng ký online, theo dõi tiến độ và cập nhật kết quả ngay trong thời gian thực.<br>" +
@@ -264,7 +264,7 @@ export const ui = {
     "testimonials.user2.author": "Dương Quốc Việt",
     "testimonials.user2.role": "Chủ CLB billiards",
     "testimonials.user2.rating": 5,
-    "testimonials.user2.avatar": "public/testimonials/testimonials-1.webp",
+    "testimonials.user2.avatar": "/testimonials/testimonials-1.webp",
     "testimonials.user3.quote":
       "Tôi là người mới tập chơi billiards và từng rất loay hoay không biết bắt đầu từ đâu hay tập luyện có đúng không. Từ khi học trên <b>VIBICO</b>, tôi cảm thấy mình tiến bộ rõ rệt – không chỉ nhờ nội dung dễ hiểu mà còn vì tôi có thể gửi bài tập để thầy chữa trực tiếp online.<br>" +
       "Chỉ cần quay lại video cú đánh của mình và nộp qua hệ thống, tôi sẽ nhận được nhận xét, hướng dẫn chỉnh sửa rất chi tiết từ các cơ thủ chuyên nghiệp. Đây là điều mà tôi chưa từng thấy ở nền tảng học billiards nào trước đây!<br>" +
@@ -272,13 +272,13 @@ export const ui = {
     "testimonials.user3.author": "Nguyễn Thái",
     "testimonials.user3.role": "Người chơi mới",
     "testimonials.user3.rating": 5,
-    "testimonials.user3.avatar": "public/testimonials/testimonials-5.webp",
+    "testimonials.user3.avatar": "/testimonials/testimonials-5.webp",
     "testimonials.user4.quote":
       "Trước đây tôi chỉ chơi bida theo bản năng, nhưng từ khi học trên <b>VIBICO</b>, tôi mới hiểu sâu hơn về chiến thuật, kỹ thuật và tâm lý thi đấu. Các khóa học được trình bày bài bản, dễ hiểu, có cả video phân tích từng thế bi cụ thể. Điều tôi thích nhất là có thể học từ những cơ thủ giàu kinh nghiệm mà trước giờ chỉ thấy qua các giải đấu. Nhờ <b>VIBICO</b>, tôi cảm thấy mình chơi chắc tay hơn và tự tin hơn mỗi khi lên bàn.",
     "testimonials.user4.author": "Nam Phạm",
     "testimonials.user4.role": "Cơ thủ nghiệp dư",
     "testimonials.user4.rating": 5,
-    "testimonials.user4.avatar": "public/testimonials/testimonials-3.webp",
+    "testimonials.user4.avatar": "/testimonials/testimonials-3.webp",
 
     // Pricing
     "pricing.badge": "Bảng giá",
