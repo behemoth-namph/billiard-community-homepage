@@ -18,7 +18,7 @@
     >
       <div
         v-if="isOpen"
-        class="absolute right-0 top-12 z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md animate-in"
+        class="absolute right-0 top-12 z-50 min-w-[9rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md animate-in"
         @click.stop
       >
         <div

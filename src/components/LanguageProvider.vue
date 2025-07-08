@@ -181,147 +181,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="w-full border-t bg-background/95 backdrop-blur-sm">
-      <div class="container flex flex-col gap-8 px-4 py-10 md:px-6 lg:py-16">
-        <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
-          <div class="space-y-4">
-            <img
-              :src="isDark ? '/logo_wh.webp' : '/logo.webp'"
-              alt="logo"
-              width="80"
-              height="32"
-              class="h-8 w-auto transition-all"
-            />
-            <p class="text-sm text-muted-foreground">
-              {{ t("footer.description") }}
-            </p>
-          </div>
-          <div class="space-y-4">
-            <h2 class="text-sm font-bold">{{ t("footer.product") }}</h2>
-            <ul class="space-y-2 text-sm">
-              <li>
-                <a
-                  href="#features"
-                  class="text-muted-foreground hover:text-foreground transition-colors"
-                  >{{ t("nav.features") }}</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#pricing"
-                  class="text-muted-foreground hover:text-foreground transition-colors"
-                  >{{ t("nav.pricing") }}</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="text-muted-foreground hover:text-foreground transition-colors"
-                  >Integrations</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="text-muted-foreground hover:text-foreground transition-colors"
-                  >API</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="space-y-4">
-            <h2 class="text-sm font-bold">{{ t("footer.resources") }}</h2>
-            <ul class="space-y-2 text-sm">
-              <li>
-                <a
-                  href="#"
-                  class="text-muted-foreground hover:text-foreground transition-colors"
-                  >Documentation</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="text-muted-foreground hover:text-foreground transition-colors"
-                  >Guides</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="text-muted-foreground hover:text-foreground transition-colors"
-                  >Blog</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="text-muted-foreground hover:text-foreground transition-colors"
-                  >Support</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="space-y-4">
-            <h2 class="text-sm font-bold">{{ t("footer.company") }}</h2>
-            <ul class="space-y-2 text-sm">
-              <li>
-                <a
-                  href="#"
-                  class="text-muted-foreground hover:text-foreground transition-colors"
-                  >About</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="text-muted-foreground hover:text-foreground transition-colors"
-                  >Careers</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="text-muted-foreground hover:text-foreground transition-colors"
-                  >Privacy Policy</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="text-muted-foreground hover:text-foreground transition-colors"
-                  >Terms of Service</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div
-          class="flex flex-col gap-4 sm:flex-row justify-between items-center border-t border-border/40 pt-8"
-        >
-          <p class="text-xs text-muted-foreground">
-            &copy; 2024 SaaSify. {{ t("footer.copyright") }}
-          </p>
-          <div class="flex gap-4">
-            <a
-              href="#"
-              class="text-xs text-muted-foreground hover:text-foreground transition-colors"
-              >Privacy Policy</a
-            >
-            <a
-              href="#"
-              class="text-xs text-muted-foreground hover:text-foreground transition-colors"
-              >Terms of Service</a
-            >
-            <a
-              href="#"
-              class="text-xs text-muted-foreground hover:text-foreground transition-colors"
-              >Cookie Policy</a
-            >
-          </div>
-        </div>
-      </div>
-    </footer>
+    <Footer :t="t" :isDark="isDark" />
   </div>
 </template>
 
@@ -330,6 +190,7 @@ import { ref, onMounted, onUnmounted, computed } from "vue";
 import { getCurrentLanguage, useTranslations } from "../i18n";
 
 import Header from "./Header.vue";
+import Footer from "./Footer.vue";
 import Hero from "./Hero.vue";
 import Features from "./Features.vue";
 // import Pricing from "./Pricing.vue";

@@ -94,7 +94,7 @@ import { MapPinIcon, PhoneIcon, MailCheckIcon } from "lucide-vue-next";
 
 import AnimatedSection from "./AnimatedSection.vue";
 
-const props = defineProps({
+defineProps({
   t: {
     type: Function,
     required: true,

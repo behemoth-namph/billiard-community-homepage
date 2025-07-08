@@ -28,6 +28,15 @@
           ></span>
         </a>
         <a
+          href="#faq"
+          class="text-sm font-medium text-muted-foreground transition-all duration-300 hover:text-foreground hover:scale-105 relative group"
+        >
+          {{ t("nav.faq") }}
+          <span
+            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"
+          ></span>
+        </a>
+        <a
           href="#testimonials"
           class="text-sm font-medium text-muted-foreground transition-all duration-300 hover:text-foreground hover:scale-105 relative group"
         >
@@ -37,19 +46,10 @@
           ></span>
         </a>
         <a
-          href="#pricing"
+          href="#contact"
           class="text-sm font-medium text-muted-foreground transition-all duration-300 hover:text-foreground hover:scale-105 relative group"
         >
-          {{ t("nav.pricing") }}
-          <span
-            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"
-          ></span>
-        </a>
-        <a
-          href="#faq"
-          class="text-sm font-medium text-muted-foreground transition-all duration-300 hover:text-foreground hover:scale-105 relative group"
-        >
-          {{ t("nav.faq") }}
+          {{ t("nav.contact") }}
           <span
             class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"
           ></span>
@@ -108,22 +108,22 @@
           >{{ t("nav.features") }}</a
         >
         <a
+          href="#faq"
+          class="py-2 text-sm font-medium"
+          @click="mobileMenuOpen = false"
+          >{{ t("nav.faq") }}</a
+        >
+        <a
           href="#testimonials"
           class="py-2 text-sm font-medium"
           @click="mobileMenuOpen = false"
           >{{ t("nav.testimonials") }}</a
         >
         <a
-          href="#pricing"
+          href="#contact"
           class="py-2 text-sm font-medium"
           @click="mobileMenuOpen = false"
-          >{{ t("nav.pricing") }}</a
-        >
-        <a
-          href="#faq"
-          class="py-2 text-sm font-medium"
-          @click="mobileMenuOpen = false"
-          >{{ t("nav.faq") }}</a
+          >{{ t("nav.contact") }}</a
         >
       </div>
     </div>
@@ -132,16 +132,10 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
-import {
-  ChevronRightIcon,
-  MenuIcon,
-  XIcon,
-  MoonIcon,
-  SunIcon,
-} from "lucide-vue-next";
+import { MenuIcon, XIcon, MoonIcon, SunIcon } from "lucide-vue-next";
 import LanguagePicker from "./LanguagePicker.vue";
 
-const props = defineProps({
+defineProps({
   t: {
     type: Function,
     required: true,

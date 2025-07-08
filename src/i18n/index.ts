@@ -1,6 +1,6 @@
 export const languages = {
-  en: "English",
   vi: "Tiếng Việt",
+  en: "English",
 };
 
 export const defaultLang = "vi";
@@ -12,20 +12,21 @@ export const ui = {
     "nav.testimonials": "Testimonials",
     "nav.pricing": "Pricing",
     "nav.faq": "FAQ",
+    "nav.contact": "Contact",
     "nav.login": "Log in",
     "nav.getStarted": "Get Started",
 
     // Hero Section
     "hero.badge": "Launching Soon",
-    "hero.title": "Elevate Your Workflow with SaaSify",
+    "hero.title": "Elevate Your Billiards Experience with Vibico",
     "hero.subtitle":
-      "The all-in-one platform that helps teams collaborate, automate, and deliver exceptional results. Streamline your processes and focus on what matters most.",
+      "Vibico is a comprehensive online platform, the ideal destination for billiards enthusiasts in Vietnam and around the world!",
     "hero.startTrial": "Start Free Trial",
-    "hero.bookDemo": "Book a Demo",
-    "hero.noCard": "No credit card",
-    "hero.trial": "14-day trial",
-    "hero.cancel": "Cancel anytime",
-    "hero.learnMore": "Learn More",
+    "hero.bookDemo": "Contact Us",
+    "hero.professional": "More Professional",
+    "hero.friendly": "User-friendly, easy to use",
+    "hero.diverse": "Diverse content",
+    "hero.learnMore": "Learn more",
 
     // Logos Section
     "logos.trusted": "Chosen by renowned clubs and players across Vietnam.",
@@ -69,11 +70,11 @@ export const ui = {
     "testimonials.subtitle":
       "Don't just take our word for it. See what our customers have to say about their experience.",
     "testimonials.user1.quote":
-      "As a professional billiards player, I was initially unsure whether sharing knowledge through an online platform would be effective. But after experiencing <b>VIBICO</b>, I was truly impressed.<br>" +
+      "As a Experienced billiards player, I was initially unsure whether sharing knowledge through an online platform would be effective. But after experiencing <b>VIBICO</b>, I was truly impressed.<br>" +
       "The interface is simple and easy to use, most importantly, I can track students’ learning progress, receive instant feedback, and easily engage with the billiards-loving community.<br>" +
       "This is a fantastic platform to share knowledge, connect with enthusiasts of the sport, and build my personal brand. ",
     "testimonials.user1.author": "Dac Truong",
-    "testimonials.user1.role": "Professional Player",
+    "testimonials.user1.role": "Experienced Billiards Player",
     "testimonials.user1.rating": 5,
     "testimonials.user1.avatar": "/testimonials/testimonials-4.webp",
     "testimonials.user2.quote":
@@ -181,9 +182,16 @@ export const ui = {
     "footer.description":
       "Streamline your workflow with our all-in-one SaaS platform. Boost productivity and scale your business.",
     "footer.product": "Product",
-    "footer.resources": "Resources",
-    "footer.company": "Company",
-    "footer.copyright": "All rights reserved.",
+    "footer.service": "Our services",
+    "footer.service.tournament": "Tournament organization",
+    "footer.service.learning": "Online learning",
+    "footer.service.shopping": "Online shopping",
+    "footer.service.players": "Find Billiard Players",
+    "footer.contact": "Contact Us",
+    "footer.copyright": "Copyright © 2025 Vibico || All Rights Reserved.",
+    "footer.privacy": "Privacy Policy",
+    "footer.terms": "Terms of Service",
+    "footer.cookies": "Cookie Policy",
   },
   vi: {
     // Navigation
@@ -191,6 +199,7 @@ export const ui = {
     "nav.testimonials": "Đánh giá",
     "nav.pricing": "Bảng giá",
     "nav.faq": "Câu hỏi",
+    "nav.contact": "Liên hệ",
     "nav.login": "Đăng nhập",
     "nav.getStarted": "Bắt đầu",
 
@@ -198,12 +207,12 @@ export const ui = {
     "hero.badge": "Sắp ra mắt",
     "hero.title": "Nâng cao trải nghiệm billiard cùng với Vibico",
     "hero.subtitle":
-      "Điểm đến lý tưởng dành cho những người đam mê môn thể thao billiard tại Việt Nam và trên toàn thế giới!",
+      "Vibico là một nền tảng trực tuyến toàn diện, điểm đến lý tưởng dành cho những người đam mê môn thể thao billiard tại Việt Nam và trên toàn thế giới!",
     "hero.startTrial": "Dùng thử miễn phí",
-    "hero.bookDemo": "Đặt lịch demo",
-    "hero.noCard": "Nâng cao trải nghiệm",
-    "hero.trial": "Thân thiện, dễ sử dụng",
-    "hero.cancel": "Đa dạng nội dung",
+    "hero.bookDemo": "Liên hệ ngay",
+    "hero.professional": "Chuyên nghiệp hơn",
+    "hero.friendly": "Thân thiện, dễ sử dụng",
+    "hero.diverse": "Đa dạng nội dung",
     "hero.learnMore": "Tìm hiểu thêm",
 
     // Logos Section
@@ -249,11 +258,11 @@ export const ui = {
     "testimonials.subtitle":
       "Đừng chỉ tin lời chúng tôi. Xem khách hàng nói gì về trải nghiệm của họ.",
     "testimonials.user1.quote":
-      "Là một cơ thủ chuyên nghiệp, tôi từng băn khoăn liệu việc chia sẻ kiến thức qua hình thức online có hiệu quả hay không. Nhưng sau khi trải nghiệm nền tảng của <b>VIBICO</b>, tôi thật sự ấn tượng. <br>" +
+      "Là một người chơi billiard lâu năm, tôi từng băn khoăn liệu việc chia sẻ kiến thức qua hình thức online có hiệu quả hay không. Nhưng sau khi trải nghiệm nền tảng của <b>VIBICO</b>, tôi thật sự ấn tượng. <br>" +
       "Giao diện đơn giản, dễ sử dụng, đặc biệt, tôi có thể theo dõi tiến độ học tập của học viên, nhận phản hồi ngay và tương tác dễ dàng với cộng đồng đam mê billiards.<br>" +
       "Đây là một nền tảng tuyệt vời để lan tỏa kiến thức, kết nối với những người yêu môn thể thao này và xây dựng thương hiệu cá nhân.",
     "testimonials.user1.author": "Đắc Trường",
-    "testimonials.user1.role": "Cơ thủ chuyên nghiệp",
+    "testimonials.user1.role": "Người chơi billiard lâu năm",
     "testimonials.user1.rating": 5,
     "testimonials.user1.avatar": "/testimonials/testimonials-4.webp",
     "testimonials.user2.quote":
@@ -364,9 +373,16 @@ export const ui = {
     "footer.description":
       "Không gian chia sẻ kiến thức, kinh nghiệm và niềm đam mê với bộ môn billiard",
     "footer.product": "Sản phẩm",
-    "footer.resources": "Tài nguyên",
-    "footer.company": "Công ty",
-    "footer.copyright": "Tất cả quyền được bảo lưu.",
+    "footer.service": "Dịch vụ của chúng tôi",
+    "footer.service.tournament": "Tổ chức giải đấu",
+    "footer.service.learning": "Học trực tuyến",
+    "footer.service.shopping": "Mua sắm trực tuyến",
+    "footer.service.players": "Tìm kiếm cơ thủ",
+    "footer.contact": "Liên hệ với chúng tôi",
+    "footer.copyright": "Bản quyền © 2025 Vibico || Đã đăng ký bản quyền.",
+    "footer.privacy": "Chính sách bảo mật",
+    "footer.terms": "Điều khoản sử dụng",
+    "footer.cookies": "Chính sách cookie",
   },
 } as const;
 

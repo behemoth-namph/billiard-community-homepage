@@ -61,19 +61,19 @@
             <CheckIcon
               class="size-4 text-primary animate-scale-in animate-delay-500"
             />
-            <span>{{ t("hero.noCard") }}</span>
+            <span>{{ t("hero.professional") }}</span>
           </div>
           <div class="flex items-center gap-1 hover-lift">
             <CheckIcon
               class="size-4 text-primary animate-scale-in animate-delay-600"
             />
-            <span>{{ t("hero.trial") }}</span>
+            <span>{{ t("hero.friendly") }}</span>
           </div>
           <div class="flex items-center gap-1 hover-lift">
             <CheckIcon
               class="size-4 text-primary animate-scale-in animate-delay-700"
             />
-            <span>{{ t("hero.cancel") }}</span>
+            <span>{{ t("hero.diverse") }}</span>
           </div>
         </div>
       </div>
@@ -90,7 +90,6 @@
           modifier: 2,
           slideShadows: false,
         }"
-        autoplay="false"
       >
         <template #default="{ item }">
           <div class="relative mx-auto max-w-5xl group">
